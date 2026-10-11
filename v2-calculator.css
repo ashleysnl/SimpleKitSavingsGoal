@@ -1,0 +1,32 @@
+/* Scenario modes, saved scenarios and import/export stay in the control column; goal results and comparisons remain adjacent. */
+.sk-v2[data-v2-calculator="savings-goal-calculator"] {
+  --savings-brand:var(--v2-blue);
+  --savings-brand-deep:var(--v2-navy);
+  --savings-brand-soft:var(--v2-teal);
+  --savings-danger:var(--v2-error);
+  --savings-ink:var(--v2-navy);
+  --savings-line:var(--v2-border);
+  --savings-line-strong:var(--v2-control-border);
+  --savings-muted:var(--v2-slate);
+  --savings-radius:var(--v2-radius-card);
+  --savings-shadow:var(--v2-shadow-soft);
+  --savings-surface:var(--v2-surface);
+  --savings-surface-soft:var(--v2-surface);
+  --savings-surface-tint:var(--v2-tint);
+  --savings-warm:var(--v2-warning);
+}
+.sk-v2[data-v2-calculator="savings-goal-calculator"] .v2c-main { row-gap:1.25rem; }
+.sk-v2[data-v2-calculator="savings-goal-calculator"] .workspace-grid { gap:1.25rem; }
+.sk-v2[data-v2-calculator="savings-goal-calculator"] .summary-grid-primary,.sk-v2[data-v2-calculator="savings-goal-calculator"] .comparison-highlights { gap:.75rem; }
+.sk-v2[data-v2-calculator="savings-goal-calculator"] .scenario-panel,.sk-v2[data-v2-calculator="savings-goal-calculator"] .storage-card,.sk-v2[data-v2-calculator="savings-goal-calculator"] .mode-context-card { background:var(--v2-surface); border-color:var(--v2-border); border-radius:var(--v2-radius-card); }
+@media(min-width:64rem) {
+ .sk-v2[data-v2-calculator="savings-goal-calculator"] .workspace-grid { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(18rem,.95fr); align-items:start; }
+}
+@media(max-width:63.99rem) {
+ .sk-v2[data-v2-calculator="savings-goal-calculator"] .workspace-grid { grid-template-columns:minmax(0,1fr); }
+ .sk-v2[data-v2-calculator="savings-goal-calculator"] .summary-card-sticky { position:static; }
+}
+@media(max-width:47.99rem) {
+ .sk-v2[data-v2-calculator="savings-goal-calculator"] :where(.form-grid,.field-grid,.advanced-grid,.input-grid,.salary-grid,.calculator-grid,.group-grid,.hero-grid,.settings-inline-grid) { grid-template-columns:minmax(0,1fr); }
+ .sk-v2[data-v2-calculator="savings-goal-calculator"] :where(.form-actions,.toolbar-actions,.action-group,.wizard-actions,.backup-actions) { flex-wrap:wrap; }
+}
